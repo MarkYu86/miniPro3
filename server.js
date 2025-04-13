@@ -1,0 +1,26 @@
+const express = require('express');
+require('dotenv').config();
+const app = express();
+const PORT = process.env.PORT || 8080;
+
+app.use(express.json());
+
+const sequelize = require('./dbConnect');
+const models = require('./models'); 
+
+sequelize.sync({ force: true }).then(() => {
+  console.log("All tables dropped and re-synced with force: true");
+
+  app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`);
+  });
+}).catch((err) => {
+  console.error("Sync error:", err);
+});
+
+const menuRoutes = require('./routes/menuRoutes');
+app.use('/api/menu', menuRoutes);
+
+app.get('/', (req, res) => {
+  res.send('API is working!');
+});

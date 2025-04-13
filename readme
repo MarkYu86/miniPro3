@@ -1,0 +1,13 @@
+MINI Project3:
+Restaurant Ordering System - Backend 1.0
+
+An online ordering system for small restaurant:
+
+1. Allow customers able to browse the menu
+and order multiple items from the website.
+
+2. Able to deliver customer's orders to restaurant.
+
+3. Track the past order history.
+
+4. Restaurant admin can manage menu items and view incoming orders.
