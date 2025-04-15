@@ -24,9 +24,6 @@ const userRoutes = require('./routes/userRoutes');
 app.use('/api/users', userRoutes); 
 const orderRoutes = require('./routes/orderRoutes');
 app.use('/api/orders', orderRoutes); 
-
-
-
 app.get('/', (req, res) => {
   res.send('API is working!');
 });
