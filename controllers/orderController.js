@@ -1,3 +1,4 @@
+//Sort creating orders and calculate the total price
 const { Order, OrderItem, MenuItem } = require("../models");
 
 exports.createOrder = async (req, res) => {

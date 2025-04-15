@@ -10,7 +10,7 @@ Order.belongsTo(User);
 Order.belongsToMany(MenuItem, { through: OrderItem });
 MenuItem.belongsToMany(Order, { through: OrderItem });
 
-sequelize.sync({ force: true })
+sequelize.sync()
   .then(() => console.log("Database synced"))
   .catch((err) => console.error("Sync failed:", err));
 
