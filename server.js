@@ -20,6 +20,9 @@ sequelize.sync().then(() => {
 
 const menuRoutes = require('./routes/menuRoutes');
 app.use('/api/menu', menuRoutes);
+const userRoutes = require('./routes/userRoutes');
+app.use('/api/users', userRoutes); 
+
 
 app.get('/', (req, res) => {
   res.send('API is working!');
