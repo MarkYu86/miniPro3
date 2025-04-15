@@ -8,7 +8,7 @@ app.use(express.json());
 const sequelize = require('./dbConnect');
 const models = require('./models'); 
 
-sequelize.sync({ force: true }).then(() => {
+sequelize.sync().then(() => {
   console.log("All tables dropped and re-synced with force: true");
 
   app.listen(PORT, () => {
