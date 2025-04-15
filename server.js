@@ -22,6 +22,9 @@ const menuRoutes = require('./routes/menuRoutes');
 app.use('/api/menu', menuRoutes);
 const userRoutes = require('./routes/userRoutes');
 app.use('/api/users', userRoutes); 
+const orderRoutes = require('./routes/orderRoutes');
+app.use('/api/orders', orderRoutes);  // Make sure this is added
+
 
 
 app.get('/', (req, res) => {

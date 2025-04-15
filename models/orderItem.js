@@ -6,6 +6,10 @@ const OrderItem = sequelize.define("OrderItem", {
     type: DataTypes.INTEGER,
     allowNull: false,
   },
+  menuItemName: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  }
 });
 
 module.exports = OrderItem;

@@ -8,7 +8,9 @@ exports.createOrder = async (req, res) => {
   const order = await Order.create({ UserId: userId, totalPrice });
 
   for (const item of items) {
+    const menuItem = await MenuItem.findByPk(item.menuItemId);
     await OrderItem.create({
+      menuItemName: menuItem.name, 
       OrderId: order.id,
       MenuItemId: item.menuItemId,
       quantity: item.quantity,
