@@ -6,7 +6,6 @@ const OrderItem = require("./orderItem");
 
 User.hasMany(Order);
 Order.belongsTo(User);
-
 Order.belongsToMany(MenuItem, { through: OrderItem });
 MenuItem.belongsToMany(Order, { through: OrderItem });
 
